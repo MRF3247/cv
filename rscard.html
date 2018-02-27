@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .clearfix::after{
+            content='';
+            display:block;
+            clear:both;
+        }
+        nav{
+            width:100%;
+            position:fixed;
+            top:0;
+            left:0;
+        }
+        .logo{
+            padding:20px 0px 10px 20px;
+        }
+        .logo span:nth-child(1){
+            color:#DB6064;
+            font-weight:bolder;
+            font-size:30px;
+            font-family:微软雅黑;
+        }
+        .logo span:nth-child(2){
+            color:#919499;
+            font-weight:bold;
+            font-size:23px;
+            font-family:微软雅黑;
+        }
+        .clearfix li{
+            float:left;
+            list-style:none;
+            padding:0px 15px;
+        }
+        .clearfix li a{
+            padding-top:40px;
+            padding-bottom: 10px;
+            border-bottom:3px solid transparent;
+            display:inline-block;
+            color:#fff;
+            font-weight:bold;
+            text-decoration: none;
+        }
+        .clearfix li a:hover{
+            border-bottom:3px solid #DB6064;
+        }
+        .logo{
+            float: left;
+        }
+        .menu{
+            float:right;
+        }
+        .banner{
+            height:515px;
+            background-image: url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+            background-position:center center;
+            background-size:cover;
+        }
+        .banner .mask{
+            height:515px;
+            background-color:rgba(0, 0, 0, 0.8);
+        }
+        .card{
+            max-width: 930px;
+            /* 比单纯写width好 */
+            height: 445px;
+            background-color: #000;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .hello{
+            position: relative;
+            color:#fff;
+            background-color: #e6686a;
+            font-weight: bold;
+            padding:2.5px 11px;
+            line-height: 22px;
+            /* 通过padding达到垂直和水平居中,line-height则是保证在不同机器上看到的都一样 */
+        }
+        .triangle{
+            position: absolute;
+            top:100%;
+            display: block;
+            width: 0px;
+            height: 0px;
+            border:10px solid transparent;
+            border-top-width:0px;
+            border-left-color: #e6686a;
+        }
+    </style>
+</head>
+<body>
+    <nav class="clearfix">
+        <div class="logo">
+            <span>RS</span><span>card</span>
+        </div>
+        <div class="menu">
+            <ul class="clearfix">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SKILLS</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">EXPERIENCE</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CALENDAR</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">OTHER</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="banner">
+        <div class="mask"></div>
+        <!-- 设置一个有黑色遮罩的banner,目标图片设置为background-image,然后在这个banner里新增一个一样大小的div设置rgba即可. -->
+    </div>
+    <div class="card">
+            <img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-hover-1-299x347.jpg" alt="头像" width="299" height="347">
+            <span class="hello">HELLO<span class="triangle"></span></span>
+        </div>
+
+</body>
+</html>
