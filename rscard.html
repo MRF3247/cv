@@ -10,6 +10,7 @@
             margin:0;
             padding:0;
         }
+        body{background-color: rgb(237,236,238);}
         .clearfix::after{
             content='';
             display:block;
@@ -73,7 +74,7 @@
             max-width: 930px;
             /* 比单纯写width好 */
             height: 445px;
-            background-color: #000;
+            background-color: #fff;
             margin-left:auto;
             margin-right:auto;
         }
@@ -82,13 +83,14 @@
             color:#fff;
             background-color: #e6686a;
             font-weight: bold;
-            padding:2.5px 11px;
+            padding:5px 11px;
             line-height: 22px;
             /* 通过padding达到垂直和水平居中,line-height则是保证在不同机器上看到的都一样 */
         }
         .triangle{
             position: absolute;
             top:100%;
+            left:5px;
             display: block;
             width: 0px;
             height: 0px;
@@ -96,7 +98,49 @@
             border-top-width:0px;
             border-left-color: #e6686a;
         }
+        .avatar{
+            float: left;
+        }
+        .info{
+            float:left;
+            margin-left:60px;
+            width: 450px;
+        }
+        .padding {
+            padding: 50px;
+        }
+        .person{
+            margin-top:30px;
+        }
+        .job{
+            margin-bottom: 30px;
+        }
+        hr{
+            margin-bottom: 20px;
+        }
+        .info dl dt,.info dl dd{
+            float: left;
+            padding: 5px 0px;
+        }
+        .info dl dt{
+            width: 30%;
+            font-weight: bold;
+        }
+        .info dl dd{
+            width: 70%;
+            color: #9E99AB;
+        }
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+        .media{
+            background-color: #D96163;
+        }
     </style>
+    <script src="at.alicdn.com/t/font_584973_yxsumqktu8281tt9.js"></script>
 </head>
 <body>
     <nav class="clearfix">
@@ -122,9 +166,41 @@
         <!-- 设置一个有黑色遮罩的banner,目标图片设置为background-image,然后在这个banner里新增一个一样大小的div设置rgba即可. -->
     </div>
     <div class="card">
+            <div class="padding clearfix">
             <div class="avatar"><img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-hover-1-299x347.jpg" alt="头像" width="299" height="347">
             </div>
-            <span class="hello">HELLO<span class="triangle"></span></span>
+            <div class="info">
+                <span class="hello">HELLO<span class="triangle"></span></span>
+                <h1 class="person">方应杭</h1><p class="job">前端开发工程师</p><hr>
+                <dl class="clearfix">
+                    <dt>年龄</dt>
+                    <dd>18</dd>
+                    <dt>所在城市</dt>
+                    <dd>北京</dd>
+                    <dt>邮箱</dt>
+                    <dd>frankfang@hfoxmail.com</dd>
+                    <dt>电话</dt>
+                    <dd>13888888888</dd>
+                </dl>
+            </div>
+            </div>
+            <footer class="media">
+                <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                </a>
+                <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-iconset0359"></use>
+                            </svg>
+                </a>
+                <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-github"></use>
+                            </svg>
+                </a>
+            </footer>
         </div>
 
 </body>
